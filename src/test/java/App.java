@@ -1,3 +1,4 @@
+import jdk.dynalink.linker.MethodHandleTransformer;
 import spark.ModelAndView;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
@@ -24,6 +25,7 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
         post("/wildlife/new", (request, response) -> {
+            Map<String, Object> model = new HashMap<>();
 
         }, new HandlebarsTemplateEngine());
     }
