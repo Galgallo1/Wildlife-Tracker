@@ -26,7 +26,7 @@ public class App {
 
         post("/wildlife/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
-            new
+
         }, new HandlebarsTemplateEngine());
     }
 
