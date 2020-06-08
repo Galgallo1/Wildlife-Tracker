@@ -24,10 +24,10 @@ public class App {
             return new ModelAndView(model, "new_wildlife.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/wildlife/new", (request, response) -> {
+        /*post("/wildlife/new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
 
-        }, new HandlebarsTemplateEngine());
+        }, new HandlebarsTemplateEngine());*/
     }
 
 }

@@ -45,10 +45,10 @@ public class AnimalsTest {
         assertTrue(animal.equals(animal1));
     }
 
-    @Test
+   @Test
     public void save() {
         Animals animaltest = new Animals("cat");
         animaltest.save();
-        assertEquals(animaltest, Animals.all().get(0));
+       assertEquals(Animals.all().get(0), animaltest);
     }
 }

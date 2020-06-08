@@ -59,4 +59,16 @@ public class Endangered extends Wildlife{
     }
 
 
+    /*public void save() {
+        try (Connection con = DB.sql2o.open()) {
+            String query = "INSERT INTO wildlife(name, type) VALUES(:name,:type)";
+            con.createQuery(query, true)
+                    .addParameter("name", this.name)
+                    .addParameter("type", this.type)
+                    .executeUpdate()
+                    .getKey();
+
+        }
+
+    }*/
 }

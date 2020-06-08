@@ -35,17 +35,8 @@ public abstract class Wildlife {
         return Objects.hash(id, name, type);
     }
 
-    public void save (){
-        try(Connection con = DB.sql2o.open()){
-            String query = "INSERT INTO wildlife(name, type) VALUES(:name,:type)";
-                    con.createQuery(query, true)
-                            .addParameter("name", this.name)
-                            .addParameter("type", this.type)
-                            .executeUpdate()
-                            .getKey();
 
-        }
-    }
+
     /*public void save1(){
         try (Connection con = DB.sql2o.open()){
             String sql = "INSERT INTO animals(name, type) VALUES(:name,:type)";
