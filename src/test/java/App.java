@@ -23,7 +23,7 @@ public class App {
             return new ModelAndView(model, "new_wildlife.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/wildlife/new"),
+        post("/wildlife/new", (request, response) -> )
     }
 
 }
