@@ -23,5 +23,7 @@ public class App {
             return new ModelAndView(model, "new_wildlife.hbs");
         }, new HandlebarsTemplateEngine());
 
+        post
     }
+
 }
