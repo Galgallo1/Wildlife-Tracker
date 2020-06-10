@@ -34,7 +34,7 @@
             <div class="tab-content">
                 <div class="tab-pane container active" id="common">
                     <h2 class="text-center">Common animals</h2>
-                    <form action="/wildlife/new" method="post">
+                    <form action="/wildlife-new" method="post">
                         <div class="form-group">
                             <label for="name">Animal species</label>
                             <input type="text" class="form-control"  name="name" id="name" aria-describedby="emailHelp" placeholder="Enter animal species eg lion" required>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="tab-pane container fade" id="endangered">
                     <h2 class="text-center">Endangered animals</h2>
-                    <form action="/wildlife/new" method="post">
+                    <form action="/wildlife-new" method="post">
                         <div class="form-group">
                             <label for="name">Animal species</label>
                             <input type="text" class="form-control"  name="name" id="name" aria-describedby="emailHelp" placeholder="Enter animal species eg lion" required>
@@ -100,3 +100,4 @@
 
 
 {{/partial}}
+{{> layout.hbs}}

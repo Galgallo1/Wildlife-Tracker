@@ -23,12 +23,12 @@ public class App {
         }, new HandlebarsTemplateEngine());
 
 
-        get("wildlife/new", (request, response) -> {
+        get("wildlife-new", (request, response) -> {
             Map<String, Object> model = new HashMap<>();
             return new ModelAndView(model, "wildlife-new.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/wildlife/new", (request, response) -> {
+        post("/wildlife-new", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             int animalId = Integer.parseInt(request.queryParams("animalId"));
             String name = request.queryParams("name");
