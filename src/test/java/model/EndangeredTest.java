@@ -14,7 +14,7 @@ public class EndangeredTest {
     public void getAge() {
         Endangered endangered = new Endangered(1,"rhino","young","okay");
         endangered.saveEndangered();
-        //endangered.saveAge("young");
+        endangered.saveAge("young");
         assertEquals("young",Endangered.all().get(0).getAge());
     }
 

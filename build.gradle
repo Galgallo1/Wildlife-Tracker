@@ -1,13 +1,12 @@
 plugins {
     id 'java'
-    //id 'application'
+    id 'application'
 }
 
 group 'Wildlife Tracker'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
-//mainClassName = 'App'
 
 repositories {
     mavenCentral()
@@ -21,3 +20,4 @@ dependencies {
     compile "com.sparkjava:spark-template-handlebars:2.5.5"
     compile 'org.slf4j:slf4j-simple:1.7.21'
 }
+mainClassName = 'App'
