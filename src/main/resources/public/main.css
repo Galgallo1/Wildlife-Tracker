@@ -5,7 +5,8 @@
     font-family: 'Lato', sans-serif;
 }
 section{
-    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://cdn.pixabay.com/photo/2018/03/12/04/00/mammal-3218712_1280.jpg");
+    background-image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://media.gettyimages.com/photos/two-giraffes-picture-id108317197?s=2048x2048");
+    //https://cdn.pixabay.com/photo/2018/03/12/04/00/mammal-3218712_1280.jpg
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;

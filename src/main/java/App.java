@@ -41,9 +41,9 @@ public class App {
                 animals.save();
             }else{
                 Endangered endangered = new Endangered(animalId,name,age,health);
-                endangered.save();
-                endangered.saveAge(age);
-                endangered.saveHealth(health);
+                endangered.saveEndangered();
+                //endangered.saveAge(age);
+                //endangered.saveHealth(health);
             }
             Sightings sightings = new Sightings(animalId, location, rangername);
             sightings.save();
@@ -57,7 +57,7 @@ public class App {
             List<Endangered> endangered = Endangered.all();
             List<Sightings> sightings = Sightings.all();
             model.put("animals", animals);
-            model.put("endamgered", endangered);
+            model.put("endangered", endangered);
             model.put("sightings", sightings);
             return  new ModelAndView(model, "all-animals.hbs");
         }, new HandlebarsTemplateEngine());
