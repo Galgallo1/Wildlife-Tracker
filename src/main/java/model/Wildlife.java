@@ -4,6 +4,7 @@ import org.sql2o.Connection;
 import java.util.Objects;
 
 public abstract class Wildlife {
+
     public int id;
     public String name;
     public String type;
@@ -37,14 +38,15 @@ public abstract class Wildlife {
 
 
 
-    /*public void save1(){
+    public void save(){
         try (Connection con = DB.sql2o.open()){
-            String sql = "INSERT INTO animals(name, type) VALUES(:name,:type)";
-            this.id = (int) con.createQuery(sql, true)
+            String sql = "INSERT INTO animalz(id, name, type) VALUES(:id,:name,:type)";
+             this.id = (int)con.createQuery(sql, true)
+                     .addParameter("id", this.id)
                     .addParameter("name",this.name)
                     .addParameter("type",this.type)
                     .executeUpdate()
                     .getKey();
         }
-    }*/
+    }
 }

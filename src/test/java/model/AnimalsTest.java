@@ -12,15 +12,15 @@ public class AnimalsTest {
 
     @Test
     public void getName() {
-        Animals animal = new Animals("Lion");
+        Animals animal = new Animals(1,"Lion");
         assertEquals("Lion", animal.getName());
     }
 
     @Test
     public void all() {
-        Animals animalTest = new Animals("Lion");
+        Animals animalTest = new Animals(1,"Lion");
         animalTest.save();
-        Animals animalTest1 = new Animals("Cat");
+        Animals animalTest1 = new Animals(1,"Cat");
         animalTest1.save();
         assertEquals(2, Animals.all().size());
         
@@ -34,21 +34,25 @@ public class AnimalsTest {
 
     @Test
     public void getType() {
-        Animals animals = new Animals("Lion");
+        Animals animals = new Animals(1,"Lion");
         assertEquals("animal", animals.getType());
     }
 
     @Test
     public void testEquals() {
-        Animals animal = new Animals("Lion");
-        Animals animal1 = new Animals("Lion");
+        Animals animal = new Animals(1,"Lion");
+        Animals animal1 = new Animals(1,"Lion");
         assertTrue(animal.equals(animal1));
     }
 
    @Test
     public void save() {
-        Animals animaltest = new Animals("cat");
-        animaltest.save();
-       assertEquals(Animals.all().get(0), animaltest);
+        Animals animalTest = new Animals(1,"cat");
+        animalTest.save();
+        assertTrue(Animals.all().get(0).equals(animalTest));
+        //catch(NullPointerException e) {
+          //  System.out.println("NullPointerException thrown!");
+
+
     }
 }

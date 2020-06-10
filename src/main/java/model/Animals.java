@@ -7,21 +7,22 @@ import java.util.List;
 public class Animals extends Wildlife {
     public static final String DATABASE_TYPE = "animal";
 
-    public Animals(String name) {
+    public Animals(int id, String name) {
         this.name = name;
+        this.id = id;
         this.type = DATABASE_TYPE;
     }
 
     public static List<Animals> all() {
         try (Connection con = DB.sql2o.open()) {
-            String sql = "SELECT FROM wildlife WHERE type='animal'";
+            String sql = "SELECT * FROM animalz WHERE type='animal'";
             return con.createQuery(sql)
                     .throwOnMappingFailure(false)
                     .executeAndFetch(Animals.class);
         }
     }
 
-    public void save() {
+    /*public void save() {
         String query = "INSERT INTO wildlife(name, type) VALUES(:name,:type)";
         try (Connection con = DB.sql2o.open()) {
             this.id = (int)con.createQuery(query, true)
@@ -32,5 +33,5 @@ public class Animals extends Wildlife {
 
         }
 
-    }
+    }*/
 }
